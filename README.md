@@ -17,3 +17,42 @@ Secure user authentication and profile management
 Admin dashboard to control content flow
 
 Responsive design with Django templates and CSS
+
+<h2>Tech Stack </h2>
+<h3>Component	Technologies Used </h3> <br>
+<strong>Backend</strong>	Django, Django REST Framework (DRF) <br>
+<strong>Database</strong>	SQLite (development), PostgreSQL (production)<br>
+<strong>Frontend</strong>	HTML5, CSS3, Django Templates<br>
+<strong>Deployment</strong>	Docker, Render <br>
+<br>
+<stong>Tech-Insight</stong><br>
+├── blog/             # Blog functionality (models, views, templates)<br>
+├── users/            # User authentication & profiles<br>
+├── media/            # Uploaded images<br>
+├── staticfiles/      # CSS, JS, and client assets<br>
+├── manage.py         # Django entry script<br>
+├── requirements.txt  # Python dependencies<br>
+├── README.md         # This file<br>
+└── LICENSE.md        # Project license<br>
+# Clone the repository
+git clone https://github.com/AyushPatiTripathi/Tech-Inshight.git
+cd Tech-Inshight
+
+# Create and activate a virtual environment
+python -m venv venv
+# macOS/Linux
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Apply database migrations
+python manage.py migrate
+
+# Create a superuser for admin access
+python manage.py createsuperuser
+
+# Run the development server
+python manage.py runserver
