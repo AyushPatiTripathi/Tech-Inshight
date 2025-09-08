@@ -692,6 +692,13 @@
                     <li><a href="#">Cloud</a></li>
                     <li><a href="#">DevOps</a></li>
                     <li><a href="#">About</a></li>
+                    {% if user.is_authenticated %}
+    <li><a href="{% url 'logout' %}">Logout ({{ user.username }})</a></li>
+{% else %}
+    <li><a href="{% url 'login' %}">Login</a></li>
+    <li><a href="{% url 'register' %}">Register</a></li>
+{% endif %}
+
                     <li>
                         <button class="theme-toggle" id="themeToggle">
                             <i class="fas fa-moon"></i>
