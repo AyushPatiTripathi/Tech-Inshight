@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-+c1h%sj89f%%f6!&b=#*t@zd0sg^rzgjsw06ctbq^leuq#*0d!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_URL = "login"         # where to redirect if not logged in
+LOGIN_REDIRECT_URL = "blog_list"  # after login success
 
 # Application definition
 STATIC_URL ='/static/'
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
 
 
 
